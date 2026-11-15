@@ -32,6 +32,96 @@ ul { list-style: none; }
     max-width: 1200px;
     margin: 0 auto;
 }
+/* --- PROFESSIONAL & BUSINESS COURSES (NEW) --- */
+.professional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.pro-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.pro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border-color: var(--logo-green);
+}
+
+.pro-card-header {
+    background-color: var(--gray-bg);
+    padding: 20px;
+    border-bottom: 3px solid var(--logo-blue);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pro-card-header h3 {
+    margin: 0;
+    color: var(--logo-blue);
+    font-size: 1.4rem;
+}
+
+.pro-icon {
+    font-size: 2rem;
+    background: var(--white);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pro-card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pro-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.pro-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd;
+    color: var(--text-main);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.pro-list li::before {
+    content: '✔';
+    color: var(--logo-green);
+    margin-right: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.pro-list li:last-child {
+    border-bottom: none;
+}
+
+/* Ensure buttons in professional cards stretch to bottom */
+.pro-card-body .btn {
+    margin-top: auto;
+}
+
 
 /* --- TYPOGRAPHY --- */
 h1, h2, h3, h4 { color: var(--logo-blue); margin-bottom: 15px; }
